@@ -1,0 +1,18 @@
+@font-face {
+  font-family: logoFont;
+  src: url(../fonts/Alegreya_Sans_SC/AlegreyaSansSC-Black.ttf);
+}
+
+.navbar-brand {
+  width: 50% !important;
+}
+
+.navbar-logo {
+  max-height: 100px;
+  box-shadow: 5px 0px 5px gray;
+
+}
+
+.logo-font {
+  font-family: logoFont;
+}
