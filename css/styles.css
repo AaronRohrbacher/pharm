@@ -3,6 +3,37 @@
   src: url(../fonts/Alegreya_Sans_SC/AlegreyaSansSC-Black.ttf);
 }
 
+#caleander {
+  text-align: center;
+}
+
+#reopening {
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 100;
+}
+#reopening-close {
+  font-size: 24px;
+}
+#reopening-close:hover {
+  cursor: pointer;
+}
+
+.content {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar-brand img{
+  max-width: 80% !important;
+}
+
+.logo-font {
+  font-family: "logoFont";
+}
+
 .navbar-background {
   background-color: black !important;
 }
@@ -27,7 +58,7 @@
   margin: 0 0 0 0 !important;
 }
 
-.content {
+.splash-content {
   height: 600px;
   background: url(../img/pictures/IMG_0072.jpg);
   background-repeat: no-repeat;
@@ -36,6 +67,12 @@
 }
 
 .center {
+  text-align: center;
+}
+
+.vertical-center {
+  margin: auto;
+  width: 50%;
   text-align: center;
 }
 

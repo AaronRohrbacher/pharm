@@ -1,92 +1,200 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>The Pharmacy</title>
 
-    <script src="js/password.js"></script>
-    <script src="jQuery/jquery-3.4.1.min.js" ></script>
-    <script src="popper/popper.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <script src="bootstrap/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/animateLogo.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>The Pharmacy Sports Bar</title>
+
+  <script src="js/password.js"></script>
+  <script src="jQuery/jquery-3.4.1.min.js"></script>
+  <script src="popper/popper.min.js"></script>
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <script src="bootstrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/animateLogo.js"></script>
+  <script type="text/javascript" src="js/caleandar.min.js"></script>
+  <link rel="stylesheet" href="css/calendar/theme3.css" />
+  <script src="js/routes.js"></script>
 
 
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-  </head>
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
 
-  <body>
-    <div class="container-fullwidth"> 
-      <nav class="navbar navbar-expand-md navbar-dark bg-light logo-font navbar-background">
-        <a class="navbar-brand" href="#">
-          <img src="img/logo.png" class="navbar-logo slide-in" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Food</a>
-                <a class="dropdown-item" href="#">Drink</a>
-              </div>
-            </li>
-          </ul>
+<body>
+    
+  <div class="container-fullwidth">
+      <div id="reopening" style="display:none">
+          <div class="close-button" style="text-align: right; padding-right: 10px" id="reopening-close">X</div>
+          <h1>Grand Re-opening</h1>
+          <h3>Friday, November 22nd</h3>
+          <h4>5pm</h4>
+          <p>Welcome back to the Pharmacy!</p>
         </div>
-      </nav>
-      <div class="row content logo-font center">
-        <div class="col">
-          <img src="img/nobhilltransparent.png" width= "80%" class="center slide-in" style="padding-top: 15px;"/>
-          <br />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <h1>Welcome to The Pharmacy</h1>
-        </div> 
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-light logo-font navbar-background">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" class="navbar-logo slide-in" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active" id="clickHome">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item active" id="clickEvents">
+            <a class="nav-link" href="#events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="clickAbout" href="#about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Contact Us
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" id="clickContact" href="#contact">Contact Us</a>
+              <a class="dropdown-item" id="clickBooking" href="#booking">Booking</a>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="col-md-4">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="col-md-4">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
+    </nav>
+    <div class="row splash-content logo-font center">
+      <div class="col">
+        <img src="img/nobhilltransparent.png" width="80%" class="center slide-in" style="padding-top: 15px;" />
+        <h1><br />Grand Re-opening</h1>
+        <h2>Friday, November 22nd</h2>
+        <h3>5:00pm</h3>
+        <br />
+        <br /><br /><br /><br /><br /><br /><br />
+        <h1>Welcome to The Pharmacy</h1>
       </div>
-      <footer class="row center">
-        <div class="col center">
-          © The Pharmacy<br />
-          2100 NW Glisan St<br />
-          Portland, OR 97210
-        </div>
-      </footer>
     </div>
-  </body>
+    <div class="row content homeContent">
+      <div class="col-xs-6 vertical-center logo-font">
+        <h3>The Pharmacy</h3>
+        <p>Northwest 21st and Glisan<br />
+          2100 NW Glisan St<br />
+          Portland, OR 97210</p>
+      </div>
+      <div class="col-xs-6 vertical-center logo-font">
+        <h3 style="">Grand Re-opening</h3>
+        <h4>This Friday, 5:00pm</h4>
+      </div>
+    </div>
+    <div class="row content eventsContent">
+      <div class="col">
+        <div id="caleandar"></div>
+      </div>
+    </div>
+    <div class="row content aboutContent">
+      <div class="col-md-4">
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+          literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+          College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+          and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
+          Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+          Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+          Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+          1.10.32.
+
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
+          form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+      </div>
+      <div class="col-md-4">
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+          literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+          College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+          and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
+          Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+          Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+          Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+          1.10.32.
+
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
+          form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+          literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+          College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+          and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
+          Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+          Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+          Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+          1.10.32.
+
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
+          form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+      </div>
+    </div>
+    <div class="row content contactContent">
+      <div class="col">
+        <div class="form-group">
+          <label for="contact-name">Your name</label>
+          <input type="text" class="form-control" id="contact-name" placeholder="Your name">  
+          <label for="contact-email">E-mail address</label>
+          <input type="text" class="form-control" id="contact-email" placeholder="E-mail address">
+          <label for="contact-message">Your message</label>
+          <textarea class="form-control rounded-0" id="contact-message" rows="10" placeholder="Let us know what's up!"></textarea>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary">
+      </div>
+    </div>
+    <div class="row content bookingContent">
+        <div class="col">
+          <div class="form-group">
+            <label for="booking-name">Your name</label>
+            <input type="text" class="form-control" id="booking-name" placeholder="Your name">  
+            <label for="booking-email">E-mail address</label>
+            <input type="text" class="form-control" id="booking-email" placeholder="E-mail address">
+            <label for="booking-message">Your message</label>
+            <textarea class="form-control rounded-0" id="booking-message" rows="10" placeholder="Let us know what's up!"></textarea>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-primary">
+        </div>
+      </div>      
+  
+    <footer class="row center">
+      <div class="col center">
+        © The Pharmacy<br />
+        2100 NW Glisan St<br />
+        Portland, OR 97210
+      </div>
+    </footer>
+  </div>
+
+
+
+  <script type="text/javascript" src="js/caleandar.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+
 </html>
