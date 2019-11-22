@@ -7,17 +7,17 @@
   text-align: center;
 }
 
-#reopening {
-  background-color: white;
+.slider{
+  background-color: #fcfbdc;
   height: 100%;
-  width: 50%;
+  width: 70%;
   position: fixed;
   z-index: 100;
 }
-#reopening-close {
+.slider-close {
   font-size: 24px;
 }
-#reopening-close:hover {
+.slider-close:hover {
   cursor: pointer;
 }
 

@@ -1,4 +1,14 @@
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
 $(document).ready(function () {
+  if (getUrlParameter('contact-success') === 'true') {
+    $('#contact-success').show();
+  }
+
   $('.content').hide();
   $('.splash-content').hide();
   if (location.hash == '#events') {
@@ -44,17 +54,18 @@ $(document).ready(function () {
     $('.splash-content').slideUp();
     $('.bookingContent').slideDown();
   });
-
-  $('.cld-title a').click(function() {
-    setTimeout(function(){
-      if (location.hash == "#reopening"){
-        $('#reopening').animate({width:'toggle'}, 350);
-      }
-    }, 50);
+// EVENTS:
+  // $('.cld-title a').click(function() {
+  //   // setTimeout(function(){
+  //     if (location.hash == "#reopening") {
+  //       $('#reopening').slideDown()
+  //     } else if (location.hash == "#openMic") {
+  //       $('#openMic').slideDown();
+  //     }
+      // clearTimeout();
+    // }, 500);
+  // });
+  $('.slider-close').click(function() {
+    $('.slider').slideUp();
   });
-  $('#reopening-close').click(function() {
-    $('#reopening').slideUp();
-  });
-
-
 });

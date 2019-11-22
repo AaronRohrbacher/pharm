@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>The Pharmacy Sports Bar</title>
+  <title>The Pharmacy Bar | NW 21st Ave. and Glisan St., Portland, Oregon</title>
 
   <script src="js/password.js"></script>
   <script src="jQuery/jquery-3.4.1.min.js"></script>
@@ -37,16 +37,41 @@
 </head>
 
 <body>
-    
+<!-- EVENTS -->
   <div class="container-fullwidth">
-      <div id="reopening" style="display:none">
-          <div class="close-button" style="text-align: right; padding-right: 10px" id="reopening-close">X</div>
-          <h1>Grand Re-opening</h1>
-          <h3>Friday, November 22nd</h3>
-          <h4>5pm</h4>
-          <p>Welcome back to the Pharmacy!</p>
-        </div>
-    
+    <div id="reopening" class="slider" style="display:none">
+      <div class="close-button slider-close" style="text-align: right; padding-right: 10px" id="reopening-close">X</div>
+      <h1>Grand Re-opening</h1>
+      <h3>Friday, November 22nd</h3>
+      <h4>5pm</h4>
+      <p>Welcome back to the Pharmacy!</p>
+    </div>
+    <div id="openMic" class="slider" style="display:none">
+      <div class="close-button slider-close" style="text-align: right; padding-right: 10px" id="openMic-close">X</div>
+      <h1>Open Mic at The Pharmacy</h1>
+      <h3>Monday, December 2nd</h3>
+      <h4>8:30pm</h4>
+      <p>Open Mic at The Pharmacy</p>
+    </div>
+    <div id="cityRiverBand" class="slider" style="display:none">
+      <div class="close-button slider-close" style="text-align: right; padding-right: 10px" id="cityRiverBand-close">X</div>
+      <h1>The City River Band</h1>
+      <h3>Friday, December 6th</h3>
+      <h4>8:30pm-11:30pm</h4>
+      <p>The City River Band at The Pharmacy</p>
+    </div>
+    <div id="newYears" class="slider" style="display:none">
+      <div class="close-button slider-close" style="text-align: right; padding-right: 10px" id="newYears-close">X</div>
+      <h1>The Bittersweet Symphonies</h1>
+      <h2>The Pharmacy New Years Eve Party!</h2>
+      <h3>Tuesday, December 31st</h3>
+      <h4>9pm-1am</h4>
+      <p>Ring in the New Year at The Pharmacy!</p>
+    </div>
+  
+  
+  
+
     <nav class="navbar navbar-expand-md navbar-dark bg-light logo-font navbar-background">
       <a class="navbar-brand" href="#">
         <img src="img/logo.png" class="navbar-logo slide-in" />
@@ -63,9 +88,9 @@
           <li class="nav-item active" id="clickEvents">
             <a class="nav-link" href="#events">Events</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" id="clickAbout" href="#about">About</a>
-          </li>
+          </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -81,6 +106,10 @@
     </nav>
     <div class="row splash-content logo-font center">
       <div class="col">
+        <div class="alert alert-success" role="alert" id="contact-success" style="display: none;">
+          Your message has been recieved. Thanks for contacting!
+        </div>
+
         <img src="img/nobhilltransparent.png" width="80%" class="center slide-in" style="padding-top: 15px;" />
         <h1><br />Grand Re-opening</h1>
         <h2>Friday, November 22nd</h2>
@@ -107,7 +136,7 @@
         <div id="caleandar"></div>
       </div>
     </div>
-    <div class="row content aboutContent">
+    <!-- <div class="row content aboutContent">
       <div class="col-md-4">
         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
           literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
@@ -154,37 +183,49 @@
           form, accompanied by English versions from the 1914 translation by H. Rackham.
         </p>
       </div>
-    </div>
+    </div> -->
     <div class="row content contactContent">
       <div class="col">
         <div class="form-group">
-          <label for="contact-name">Your name</label>
-          <input type="text" class="form-control" id="contact-name" placeholder="Your name">  
-          <label for="contact-email">E-mail address</label>
-          <input type="text" class="form-control" id="contact-email" placeholder="E-mail address">
-          <label for="contact-message">Your message</label>
-          <textarea class="form-control rounded-0" id="contact-message" rows="10" placeholder="Let us know what's up!"></textarea>
+          <form action="php/contact.php" method="get">
+            <label for="contact-name">Your name</label>
+            <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Your name">
+            <label for="contact-email">E-mail address</label>
+            <input type="email" class="form-control" id="contact-email" name="contact-email"
+              placeholder="E-mail address">
+            <label for="message">Your message</label>
+            <textarea class="form-control rounded-0" id="contact-message" name="contact-message" rows="10"
+              placeholder="Let us know what's up!"></textarea>
+            <input type="submit" value="Submit" class="btn btn-primary">
+          </form>
         </div>
-        <input type="submit" value="Submit" class="btn btn-primary">
       </div>
     </div>
     <div class="row content bookingContent">
-        <div class="col">
-          <div class="form-group">
-            <label for="booking-name">Your name</label>
-            <input type="text" class="form-control" id="booking-name" placeholder="Your name">  
-            <label for="booking-email">E-mail address</label>
-            <input type="text" class="form-control" id="booking-email" placeholder="E-mail address">
-            <label for="booking-message">Your message</label>
-            <textarea class="form-control rounded-0" id="booking-message" rows="10" placeholder="Let us know what's up!"></textarea>
-          </div>
-          <input type="submit" value="Submit" class="btn btn-primary">
+      <div class="col">
+        <div class="form-group">
+          <form action="php/contact.php?booking=true" method="get">
+            <input type="hidden" name="booking" value="true">
+            <label for="contact-name">Your name</label>
+            <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Your name">
+            <label for="contact-email">E-mail address</label>
+            <input type="email" class="form-control" id="contact-email" name="contact-email" placeholder="E-mail address">
+            <label for="portfolio">Where can we hear you? (website/video/blog/etc...)</label>
+            <input type="text" class="form-control" id="portfolio" name="portfolio"
+              placeholder="Tell us where to find your work">
+
+            <label for="message">Your message</label>
+            <textarea class="form-control rounded-0" id="booking-message" name="contact-message" rows="10"
+              placeholder="Let us know what's up!"></textarea>
+            <input type="submit" value="Submit" class="btn btn-primary">
+          </form>
         </div>
-      </div>      
-  
+      </div>
+    </div>
+
     <footer class="row center">
       <div class="col center">
-        © The Pharmacy<br />
+        &#169; The Pharmacy<br />
         2100 NW Glisan St<br />
         Portland, OR 97210
       </div>
